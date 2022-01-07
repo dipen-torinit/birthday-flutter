@@ -13,7 +13,7 @@ class Auth with ChangeNotifier {
 
   void authenticate() {
     Timer(const Duration(seconds: 5), () {
-      isAuth = AUTHSTATE.success;
+      isAuth = AUTHSTATE.failed;
       notifyListeners();
     });
   }

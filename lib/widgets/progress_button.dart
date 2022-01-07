@@ -21,7 +21,6 @@ class _ProgressButtonState extends State<ProgressButton> {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(widget.showProgress.toString()),
         TextButton(
           style: ButtonStyle(
               backgroundColor: MaterialStateProperty.all<Color>(Colors.green)),
