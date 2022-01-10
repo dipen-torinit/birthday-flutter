@@ -1,7 +1,6 @@
 import 'dart:developer';
 
 import 'package:birthday_flutter/navigation/tab_screen.dart';
-import 'package:birthday_flutter/screens/birthday_list_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 

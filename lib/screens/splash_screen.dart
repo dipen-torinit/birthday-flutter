@@ -4,7 +4,6 @@ import 'package:birthday_flutter/widgets/progress_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'birthday_list_screen.dart';
 import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {

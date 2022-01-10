@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 
 import 'package:birthday_flutter/providers/birthday_list.dart';
 import 'package:birthday_flutter/screens/birthday_detail_screen.dart';
