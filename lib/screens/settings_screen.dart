@@ -4,15 +4,15 @@ import 'package:birthday_flutter/widgets/progress_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class HomeScreen extends StatefulWidget {
-  static const routeName = "/Home";
+class SettingsScreen extends StatefulWidget {
+  static const routeName = "/Settings";
 
-  const HomeScreen({Key? key}) : super(key: key);
+  const SettingsScreen({Key? key}) : super(key: key);
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<SettingsScreen> createState() => _SettingsScreenState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,11 +20,6 @@ class _HomeScreenState extends State<HomeScreen> {
         crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          const Text(
-            'Home Screen',
-            style: TextStyle(
-                color: Colors.cyan, fontWeight: FontWeight.bold, fontSize: 24),
-          ),
           ProgressButton(
               label: "Logout",
               callback: () {

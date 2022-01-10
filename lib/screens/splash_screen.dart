@@ -1,9 +1,10 @@
+import 'package:birthday_flutter/navigation/tab_screen.dart';
 import 'package:birthday_flutter/providers/auth.dart';
 import 'package:birthday_flutter/widgets/progress_button.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'home_screen.dart';
+import 'birthday_list_screen.dart';
 import 'login_screen.dart';
 
 class SplashScreen extends StatefulWidget {
@@ -33,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
       //If user is authorized then move to Home sreen else Login screen
       if (auth.isAuth == AUTHSTATE.success) {
         WidgetsBinding.instance?.addPostFrameCallback((_) {
-          Navigator.pushReplacementNamed(context, HomeScreen.routeName);
+          Navigator.pushReplacementNamed(context, TabsScreen.routeName);
         });
       } else if (auth.isAuth == AUTHSTATE.failed) {
         WidgetsBinding.instance?.addPostFrameCallback((_) {

@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:birthday_flutter/providers/birthday_list.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -13,7 +14,10 @@ void main() async {
   final Future<FirebaseApp> _initializeApp = Firebase.initializeApp();
 
   runApp(MultiProvider(
-    providers: [ChangeNotifierProvider(create: (context) => Auth())],
+    providers: [
+      ChangeNotifierProvider(create: (context) => Auth()),
+      ChangeNotifierProvider(create: (context) => BirthdayList())
+    ],
     child: FutureBuilder(
         future: _initializeApp,
         builder: (context, snapshot) {

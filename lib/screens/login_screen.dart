@@ -1,6 +1,7 @@
 import 'dart:developer';
 
-import 'package:birthday_flutter/screens/home_screen.dart';
+import 'package:birthday_flutter/navigation/tab_screen.dart';
+import 'package:birthday_flutter/screens/birthday_list_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -65,8 +66,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             .signInWithEmailAndPassword(
                                 email: loginIdController.text,
                                 password: passwordController.text);
-                        log(result.toString());
-                        Navigator.pushNamed(context, HomeScreen.routeName);
+                        Navigator.pushNamed(context, TabsScreen.routeName);
                       } catch (e) {
                         log(e.toString());
                       }
