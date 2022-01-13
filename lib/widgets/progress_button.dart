@@ -20,6 +20,7 @@ class _ProgressButtonState extends State<ProgressButton> {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         TextButton(
           style: ButtonStyle(

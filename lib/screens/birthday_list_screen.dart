@@ -37,7 +37,7 @@ class _BirthdayListScreenState extends State<BirthdayListScreen> {
                   child: Container(
                     margin: const EdgeInsets.all(4),
                     padding: const EdgeInsets.all(4),
-                    color: Colors.amberAccent,
+                    color: Colors.cyan,
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -74,18 +74,15 @@ class _BirthdayListScreenState extends State<BirthdayListScreen> {
                 );
               });
         } else {
-          return Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: const [
-              Text(
-                "Wait",
-                style: TextStyle(
-                    color: Colors.cyan,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 24),
+          return Container(
+            color: Colors.cyan,
+            child: const Center(
+              child: Icon(
+                Icons.rowing_rounded,
+                size: 200,
+                color: Colors.amberAccent,
               ),
-            ],
+            ),
           );
         }
       }),

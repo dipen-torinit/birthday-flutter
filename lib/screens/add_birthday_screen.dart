@@ -1,3 +1,4 @@
+import 'package:birthday_flutter/common/Validation.dart';
 import 'package:birthday_flutter/providers/birthday_list.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -32,6 +33,10 @@ class _AddBirthdayScreenState extends State<AddBirthdayScreen> {
           progressState = "Birthday request running";
         } else if (birthdayResponse.addResponse == ADD_BIRTHDAY_STATE.success) {
           progressState = "Birthday added successfully";
+          nameController.clear();
+          emailController.clear();
+          phoneController.clear();
+          dateController.clear();
         } else if (birthdayResponse.addResponse == ADD_BIRTHDAY_STATE.failed) {
           progressState = "Request failed";
         } else {
@@ -55,7 +60,7 @@ class _AddBirthdayScreenState extends State<AddBirthdayScreen> {
                   TextFormField(
                     controller: nameController,
                     validator: (value) {
-                      if (value == null || value.isEmpty) {
+                      if (!Validation.isNameValid(value.toString())) {
                         return 'Please enter name';
                       }
                       return null;
@@ -66,7 +71,7 @@ class _AddBirthdayScreenState extends State<AddBirthdayScreen> {
                   TextFormField(
                     controller: emailController,
                     validator: (value) {
-                      if (value == null || value.isEmpty) {
+                      if (!Validation.isEmailValid(value.toString())) {
                         return 'Please enter email';
                       }
                       return null;
@@ -77,7 +82,7 @@ class _AddBirthdayScreenState extends State<AddBirthdayScreen> {
                   TextFormField(
                     controller: phoneController,
                     validator: (value) {
-                      if (value == null || value.isEmpty) {
+                      if (!Validation.isPhoneValid(value.toString())) {
                         return 'Please enter phone number';
                       }
                       return null;
@@ -89,7 +94,7 @@ class _AddBirthdayScreenState extends State<AddBirthdayScreen> {
                   TextFormField(
                     controller: dateController,
                     validator: (value) {
-                      if (value == null || value.isEmpty) {
+                      if (!Validation.isValidDate(value.toString())) {
                         return 'Please enter birthdate';
                       }
                       return null;

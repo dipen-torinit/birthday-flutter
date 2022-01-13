@@ -16,18 +16,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.center,
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ProgressButton(
-              label: "Logout",
-              callback: () {
-                Provider.of<Auth>(context, listen: false).signOut();
-                Navigator.pushNamed(context, SplashScreen.routeName);
-              },
-              showProgress: false)
-        ],
+      body: Container(
+        padding: const EdgeInsets.all(20),
+        color: Colors.cyan,
+        alignment: Alignment.bottomCenter,
+        child: ProgressButton(
+            label: "Logout",
+            callback: () {
+              Provider.of<Auth>(context, listen: false).signOut();
+              Navigator.pushNamed(context, SplashScreen.routeName);
+            },
+            showProgress: false),
       ),
     );
   }

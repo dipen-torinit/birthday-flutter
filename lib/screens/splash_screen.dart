@@ -42,12 +42,12 @@ class _SplashScreenState extends State<SplashScreen> {
       }
       return Scaffold(
         body: Container(
-          color: Colors.black87,
-          child: Center(
-            child: ProgressButton(
-              label: "Splash Screen",
-              callback: pressButton,
-              showProgress: (auth.isAuth == AUTHSTATE.checking),
+          color: Colors.cyan,
+          child: const Center(
+            child: Icon(
+              Icons.event_available_outlined,
+              size: 200,
+              color: Colors.amberAccent,
             ),
           ),
         ),
