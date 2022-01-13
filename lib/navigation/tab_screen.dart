@@ -1,3 +1,4 @@
+import 'package:birthday_flutter/screens/add_birthday_screen.dart';
 import 'package:birthday_flutter/screens/error_screen.dart';
 import 'package:birthday_flutter/screens/birthday_list_screen.dart';
 import 'package:birthday_flutter/screens/settings_screen.dart';
@@ -15,7 +16,7 @@ class TabsScreen extends StatefulWidget {
 class _TabsScreenState extends State<TabsScreen> {
   final List<Map<String, Object>> _pages = const [
     {"page": BirthdayListScreen(), "title": "Birthday List"},
-    {"page": ErrorScreen(), "title": "Error"},
+    {"page": AddBirthdayScreen(), "title": "Add Birthday"},
     {"page": SettingsScreen(), "title": "Settings"},
   ];
 
@@ -41,7 +42,7 @@ class _TabsScreenState extends State<TabsScreen> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            label: 'All',
+            label: 'Add',
             backgroundColor: Colors.purple,
           ),
           BottomNavigationBarItem(
